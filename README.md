@@ -22,19 +22,19 @@ print L and U matrix.
 
 ## Program:
 ```
-'''Program to solve a matrix using LU decomposition.
+'''Program to find L and U matrix using LU decomposition.
 Developed by: Jegathish s
 RegisterNumber: 21005410
 '''
 
-# To print X matrix (solution to the equations)
+# To print L and U matrix
 import numpy as np
-from scipy.linalg import lu_factor, lu_solve
+from scipy.linalg import lu
 A=np.array(eval(input()))
-B=np.array(eval(input()))
-lu,pivot=lu_factor(A)
-x=lu_solve((lu,pivot),B)
-print(x)
+P, L, U =lu(A)
+print(L)
+print(U)
+
 ```
 
 ## Output:
