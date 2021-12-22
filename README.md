@@ -37,7 +37,7 @@ print(U)
 ```
 
 ## Output:
-![lu decomposition]()
+
 ![output](sum1.png)
 
 
@@ -72,22 +72,23 @@ print the solution.
 
 ## Program:
 ```
-'''Program to find L and U matrix using LU decomposition.
+'''Program to solve a matrix using LU decomposition.
 Developed by: Jegathish s
 RegisterNumber: 21005410
 '''
 
-# To print L and U matrix
+# To print X matrix (solution to the equations)
 import numpy as np
-from scipy.linalg import lu
+from scipy.linalg import lu_factor, lu_solve
 A=np.array(eval(input()))
-P, L, U =lu(A)
-print(L)
-print(U)
+B=np.array(eval(input()))
+lu,pivot=lu_factor(A)
+x=lu_solve((lu,pivot),B)
+print(x)
 ```
 
 ## Output:
-![lu decomposition]()
+
 ![output](sum2.png)
 
 
